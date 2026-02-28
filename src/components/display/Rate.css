@@ -1,0 +1,87 @@
+.bedi-rate {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bedi-rate-star-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.bedi-rate-star {
+  display: inline-block;
+  color: var(--color-border-3);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  /* 移除transition，让变化更即时 */
+}
+
+.bedi-rate-star.full {
+  color: #fadb14;
+}
+
+.bedi-rate-star.half {
+  color: #fadb14;
+}
+
+.bedi-rate-star.empty {
+  color: var(--color-border-3);
+}
+
+/* CSS hover效果 - 纯CSS实现 */
+.bedi-rate:not(.disabled):hover .bedi-rate-star.empty {
+  color: var(--color-border-2);
+}
+
+/* hover时点亮所有星星，即时变化 */
+.bedi-rate:not(.disabled):hover .bedi-rate-star {
+  color: #fadb14;
+}
+
+/* 点击效果 - 即时变化 */
+.bedi-rate-star-wrapper:active .bedi-rate-star {
+  color: #fadb14;
+}
+
+.bedi-rate.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.bedi-rate.disabled .bedi-rate-star {
+  cursor: not-allowed;
+  color: var(--color-border-3);
+}
+
+.bedi-rate.disabled .bedi-rate-star:hover {
+  color: var(--color-border-3);
+}
+
+/* Size variants */
+.bedi-rate.small .bedi-rate-star {
+  font-size: 14px;
+}
+
+.bedi-rate.medium .bedi-rate-star {
+  font-size: 18px;
+}
+
+.bedi-rate.large .bedi-rate-star {
+  font-size: 24px;
+}
+
+.bedi-rate.small {
+  gap: 2px;
+}
+
+.bedi-rate.medium {
+  gap: 4px;
+}
+
+.bedi-rate.large {
+  gap: 6px;
+}

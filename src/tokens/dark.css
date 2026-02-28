@@ -1,0 +1,27 @@
+[data-theme="dark"] {
+  --color-text-1: #F6F6F6;
+  --color-text-2: #C9CDD4;
+  --color-text-3: #86909C;
+  --color-text-4: #4E5969;
+
+  --color-bg-1: #1D2129;
+  --color-bg-2: #23272E;
+  --color-bg-3: #2A2E35;
+  --color-bg-4: #33373E;
+
+  --color-border-1: #33373E;
+  --color-border-2: #484848;
+  --color-border-3: #5B5B5B;
+
+  --color-fill-1: #33373E;
+  --color-fill-2: #484848;
+  --color-fill-3: #5B5B5B;
+
+  /* 优化深色模式下的primary颜色，提高饱和度 */
+  --color-primary: #4D94FF;
+  --color-primary-hover: #6FA8FF;
+  --color-primary-active: #2D7FE8;
+  --color-primary-light: rgba(77, 148, 255, 0.2);
+
+  --shadow-focus: 0 0 0 2px rgba(77, 148, 255, 0.4);
+}

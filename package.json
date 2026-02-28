@@ -1,0 +1,55 @@
+{
+  "name": "@bedi/design-system",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/bedi.cjs",
+  "module": "dist/bedi.js",
+  "types": "dist/index.d.ts",
+  "style": "dist/bedi.css",
+  "exports": {
+    ".": {
+      "import": "./dist/bedi.js",
+      "require": "./dist/bedi.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./tokens": "./src/tokens/index.css",
+    "./src/tokens/index.css": "./src/tokens/index.css",
+    "./src/tokens/variables.css": "./src/tokens/variables.css",
+    "./src/tokens/dark.css": "./src/tokens/dark.css",
+    "./src/tokens/base.css": "./src/tokens/base.css",
+    "./src/index.css": "./src/index.css"
+  },
+  "files": [
+    "dist",
+    "src/tokens",
+    "src/index.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:lib": "vite build --config vite.lib.config.ts",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "release": "npm run typecheck && npm run build:lib && npm version patch && npm publish --access public"
+  },
+  "dependencies": {
+    "fuse.js": "^7.1.0",
+    "react-router-dom": "^6.20.0"
+  },
+  "peerDependencies": {
+    "framer-motion": "^10.16.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "framer-motion": "^10.16.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.0"
+  }
+}

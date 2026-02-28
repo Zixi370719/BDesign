@@ -1,0 +1,67 @@
+.bedi-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-fill-3);
+  color: var(--color-text-1);
+  font-weight: 500;
+  user-select: none;
+  border: 1px solid var(--color-border-2);
+  overflow: hidden;
+  position: relative;
+}
+
+.bedi-avatar-size-small {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
+
+.bedi-avatar-size-default {
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+}
+
+.bedi-avatar-size-medium {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.bedi-avatar-size-large {
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+}
+
+.bedi-avatar-shape-circle {
+  border-radius: 50%;
+}
+
+.bedi-avatar-shape-square {
+  border-radius: var(--radius-md);
+}
+
+.bedi-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bedi-avatar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.bedi-avatar-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+}

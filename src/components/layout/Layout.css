@@ -1,0 +1,56 @@
+.bedi-layout {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  min-height: 0;
+  background: var(--color-bg-2);
+}
+
+.bedi-layout-header {
+  flex: 0 0 auto;
+  padding: 16px 24px;
+  background: var(--color-bg-1);
+  border-bottom: 1px solid var(--color-border-1);
+  line-height: 64px;
+  height: 64px;
+}
+
+.bedi-layout-content {
+  flex: auto;
+  min-height: 0;
+  padding: 24px;
+  background: var(--color-bg-1);
+}
+
+.bedi-layout-footer {
+  flex: 0 0 auto;
+  padding: 16px 24px;
+  background: var(--color-bg-1);
+  border-top: 1px solid var(--color-border-1);
+  text-align: center;
+}
+
+.bedi-layout-sider {
+  flex: 0 0 auto;
+  background: var(--color-bg-1);
+  transition: all 0.2s;
+  position: relative;
+}
+
+.bedi-layout-sider-collapsible {
+  position: relative;
+}
+
+.bedi-layout-sider-collapsed {
+  width: 80px !important;
+}
+
+/* Has sider layout */
+.bedi-layout-has-sider {
+  flex-direction: row;
+  min-height: 0;
+}
+
+.bedi-layout-has-sider .bedi-layout-content {
+  overflow: auto;
+}

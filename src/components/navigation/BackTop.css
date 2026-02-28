@@ -1,0 +1,30 @@
+.bedi-back-top {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+
+.bedi-back-top:hover {
+  background: rgba(0, 0, 0, 0.65);
+  transform: scale(1.1);
+}
+
+.bedi-back-top-content {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bedi-back-top-icon {
+  line-height: 1;
+}

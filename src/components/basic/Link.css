@@ -1,0 +1,81 @@
+.bedi-link {
+  color: #1890ff;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 当 Link 包裹 Button 时，不覆盖按钮的样式 */
+.bedi-link .bedi-button:not([class*="bedi-button"]) {
+  color: unset !important;
+}
+
+.bedi-link:hover .bedi-button:not([class*="bedi-button"]) {
+  color: unset !important;
+}
+
+/* 更强的选择器来保护按钮颜色 */
+.bedi-link .bedi-button-primary {
+  color: #ffffff !important;
+}
+
+.bedi-link:hover .bedi-button-primary {
+  color: #ffffff !important;
+}
+
+.bedi-link .bedi-button-outline {
+  color: #165DFF !important;
+}
+
+.bedi-link:hover .bedi-button-outline {
+  color: #165DFF !important;
+}
+
+.bedi-link .bedi-button-secondary {
+  color: #1D2129 !important;
+}
+
+.bedi-link:hover .bedi-button-secondary {
+  color: #1D2129 !important;
+}
+
+.bedi-link .bedi-button-danger {
+  color: #ffffff !important;
+}
+
+.bedi-link:hover .bedi-button-danger {
+  color: #ffffff !important;
+}
+
+.bedi-link .bedi-button-ghost {
+  color: #1D2129 !important;
+}
+
+.bedi-link:hover .bedi-button-ghost {
+  color: #1D2129 !important;
+}
+
+.bedi-link:hover {
+  color: #40a9ff;
+}
+
+.bedi-link-underline {
+  text-decoration: underline;
+}
+
+.bedi-link-no-underline {
+  text-decoration: none;
+}
+
+.bedi-link-disabled {
+  color: #bfbfbf;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.bedi-link-disabled:hover {
+  color: #bfbfbf;
+}

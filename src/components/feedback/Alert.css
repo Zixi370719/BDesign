@@ -1,0 +1,77 @@
+.bedi-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 2px solid;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+}
+
+.bedi-alert-info {
+  background: linear-gradient(135deg, var(--color-blue-1) 0%, rgba(36, 137, 255, 0.08) 100%);
+  color: var(--color-blue-8);
+  border-color: var(--color-blue-4);
+}
+
+.bedi-alert-success {
+  background: linear-gradient(135deg, var(--color-green-1) 0%, rgba(82, 196, 26, 0.08) 100%);
+  color: var(--color-green-8);
+  border-color: var(--color-green-4);
+}
+
+.bedi-alert-warning {
+  background: linear-gradient(135deg, var(--color-orange-1) 0%, rgba(250, 173, 20, 0.08) 100%);
+  color: var(--color-orange-8);
+  border-color: var(--color-orange-4);
+}
+
+.bedi-alert-error {
+  background: linear-gradient(135deg, var(--color-red-1) 0%, rgba(245, 34, 45, 0.08) 100%);
+  color: var(--color-red-8);
+  border-color: var(--color-red-4);
+}
+
+.bedi-alert-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.bedi-alert-content {
+  flex: 1;
+}
+
+.bedi-alert-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.bedi-alert-message {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.bedi-alert-close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: currentColor;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.bedi-alert-close:hover {
+  opacity: 1;
+}

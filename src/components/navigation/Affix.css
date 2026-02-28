@@ -1,0 +1,8 @@
+.bedi-affix {
+  transition: position 0.2s ease;
+}
+
+.bedi-affix-fixed {
+  position: fixed;
+  z-index: 1000;
+}

@@ -1,0 +1,31 @@
+.bedi-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bedi-progress-outer {
+  flex: 1;
+}
+
+.bedi-progress-inner {
+  width: 100%;
+  background: var(--color-fill-2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bedi-progress-bg {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.35s ease, background-color 0.2s ease;
+}
+
+.bedi-progress-text {
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  min-width: 44px;
+  text-align: right;
+  color: var(--color-text-2);
+}

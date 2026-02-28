@@ -1,0 +1,78 @@
+.bedi-code-editor {
+  background: #1e1e1e;
+  border: 2px solid #2d2d2d;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: var(--spacing-4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.bedi-code-editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px var(--spacing-5);
+  background: linear-gradient(135deg, #2d2d2d 0%, #252525 100%);
+  border-bottom: 2px solid #3d3d3d;
+}
+
+.bedi-code-language {
+  font-size: 12px;
+  color: #858585;
+  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  background: rgba(36, 137, 255, 0.15);
+  border-radius: 4px;
+  border: 1px solid rgba(36, 137, 255, 0.3);
+}
+
+.bedi-code-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-blue-7) 100%);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(36, 137, 255, 0.3);
+}
+
+.bedi-code-copy-btn:hover {
+  background: linear-gradient(135deg, var(--color-blue-7) 0%, var(--color-blue-8) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(36, 137, 255, 0.5);
+}
+
+.bedi-code-copy-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.bedi-code-editor-textarea {
+  width: 100%;
+  min-height: 250px;
+  padding: var(--spacing-5);
+  font-family: 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #d4d4d4;
+  background: #1e1e1e;
+  border: none;
+  outline: none;
+  resize: vertical;
+  tab-size: 2;
+}
+
+.bedi-code-editor-textarea::selection {
+  background: rgba(36, 137, 255, 0.3);
+  color: #ffffff;
+}

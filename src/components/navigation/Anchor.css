@@ -1,0 +1,32 @@
+.bedi-anchor {
+  position: relative;
+  padding: 8px 16px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  max-width: 200px;
+}
+
+.bedi-anchor-link {
+  margin: 4px 0;
+}
+
+.bedi-anchor-link-title {
+  display: block;
+  padding: 4px 8px;
+  color: rgba(0, 0, 0, 0.65);
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.bedi-anchor-link-title:hover {
+  background: #f5f5f5;
+  color: #1890ff;
+}
+
+.bedi-anchor-link-active .bedi-anchor-link-title {
+  background: #e6f7ff;
+  color: #1890ff;
+  font-weight: 500;
+}

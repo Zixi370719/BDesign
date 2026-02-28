@@ -1,0 +1,20 @@
+.bedi-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.bedi-icon:hover {
+  opacity: 0.8;
+}
+
+.bedi-icon-clickable {
+  cursor: pointer;
+}
+
+.bedi-icon-clickable:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,516 @@
+/* BEDI Button Documentation Styles - 完全符合 BEDI 设计系统 */
+
+.bedi-button-doc {
+  min-height: calc(100vh - var(--header-height));
+  background-color: var(--color-bg-2);
+}
+
+.bedi-design-content {
+  flex: 1;
+  padding: var(--spacing-xl);
+  overflow-y: auto;
+}
+
+/* BEDI 风格的页面头部 */
+.bedi-header {
+  margin-bottom: 56px;
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border-1);
+}
+
+.bedi-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-3);
+}
+
+.bedi-breadcrumb .separator {
+  color: var(--color-text-4);
+}
+
+.bedi-breadcrumb .current {
+  color: var(--color-text-1);
+  font-weight: 500;
+}
+
+.bedi-title {
+  font-size: var(--font-size-xxl);
+  font-weight: 600;
+  color: var(--color-text-1);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+.bedi-description {
+  font-size: var(--font-size-md);
+  color: var(--color-text-2);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  max-width: 800px;
+}
+
+.bedi-meta {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.bedi-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.bedi-meta-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-3);
+}
+
+.bedi-meta-value {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-1);
+  font-weight: 500;
+}
+
+.bedi-meta-value.stable {
+  color: var(--color-success);
+  background-color: var(--color-success-light);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+}
+
+/* BEDI 风格的章节 */
+.bedi-section {
+  margin-bottom: 48px;
+}
+
+.bedi-section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-1);
+  margin-bottom: 36px;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid transparent;
+  background-image: linear-gradient(to right, #e0e0e0, transparent);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+
+/* 使用指南网格 */
+.bedi-usage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.bedi-usage-card {
+  padding: var(--spacing-xl);
+  background-color: var(--color-bg-1);
+  border: 1px solid var(--color-border-1);
+  border-radius: var(--radius-lg);
+  transition: all 0.2s ease;
+}
+
+.bedi-usage-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-2);
+}
+
+.bedi-usage-card h3 {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-text-1);
+  margin-bottom: var(--spacing-md);
+}
+
+.bedi-usage-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bedi-usage-card li {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-2);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.bedi-usage-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+/* 动态配置容器 */
+.bedi-dynamic-config-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.bedi-preview-panel, .bedi-config-panel {
+  background-color: var(--color-bg-1);
+  border: 1px solid var(--color-border-1);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.bedi-preview-header, .bedi-config-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-bg-2);
+  border-bottom: 1px solid var(--color-border-1);
+}
+
+.bedi-preview-header h4, .bedi-config-header h4 {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-text-1);
+  margin: 0;
+}
+
+.bedi-preview-content {
+  padding: var(--spacing-xl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+}
+
+.bedi-config-content {
+  padding: var(--spacing-lg);
+}
+
+.bedi-config-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm);
+  background-color: var(--color-bg-2);
+  border-radius: var(--radius-sm);
+}
+
+.bedi-config-group label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-1);
+  min-width: 80px;
+}
+
+.bedi-config-group select {
+  flex: 1;
+  margin-left: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-border-1);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-1);
+  color: var(--color-text-1);
+  font-size: var(--font-size-sm);
+}
+
+.bedi-config-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-left: var(--spacing-sm);
+}
+
+/* 样式解读和使用说明 */
+.bedi-style-description, .bedi-usage-description {
+  background-color: var(--color-bg-1);
+  border: 1px solid var(--color-border-1);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.bedi-style-description h4, .bedi-usage-description h4 {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-text-1);
+  margin-bottom: var(--spacing-sm);
+  margin-top: 0;
+}
+
+.bedi-style-description p, .bedi-usage-description p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-2);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.bedi-style-description ul, .bedi-usage-description ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bedi-style-description li, .bedi-usage-description li {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-2);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.bedi-style-description li::before, .bedi-usage-description li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+/* 演示区域 */
+.bedi-demo-section {
+  margin-bottom: 48px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.bedi-demo-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-1);
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid transparent;
+  background-image: linear-gradient(to right, #e0e0e0, transparent);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+
+.bedi-demo-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-2);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.bedi-demo-container {
+  padding: var(--spacing-lg);
+  background-color: var(--color-bg-1);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-1);
+  margin-bottom: var(--spacing-md);
+}
+
+.bedi-demo-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--spacing-md);
+}
+
+/* 代码块 - 可展开收起 */
+.bedi-code-block {
+  background-color: #282c34;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.bedi-code-block pre {
+  margin: 0;
+  padding: var(--spacing-lg);
+  font-family: 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace;
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+  color: #abb2bf;
+  overflow-x: auto;
+}
+
+.bedi-code-block code {
+  font-family: inherit;
+}
+
+/* API 表格 */
+.bedi-api-table {
+  margin-bottom: var(--spacing-xl);
+}
+
+.bedi-api-table h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-1);
+  margin-bottom: var(--spacing-md);
+}
+
+.bedi-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-bg-1);
+  border: 1px solid var(--color-border-1);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.bedi-table th,
+.bedi-table td {
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-1);
+  font-size: var(--font-size-sm);
+}
+
+.bedi-table th {
+  background-color: var(--color-bg-2);
+  font-weight: 600;
+  color: var(--color-text-1);
+  border-bottom: 2px solid var(--color-border-1);
+}
+
+.bedi-table td {
+  color: var(--color-text-2);
+}
+
+.bedi-table code {
+  background-color: var(--color-fill-1);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .bedi-design-content {
+    padding: var(--spacing-lg);
+  }
+
+  .bedi-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .bedi-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .bedi-usage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bedi-dynamic-config-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .bedi-table {
+    font-size: var(--font-size-xs);
+  }
+
+  .bedi-table th,
+  .bedi-table td {
+    padding: var(--spacing-sm);
+  }
+
+  .bedi-demo-container {
+    padding: var(--spacing-md);
+  }
+
+  .bedi-code-block pre {
+    padding: var(--spacing-md);
+    font-size: var(--font-size-xs);
+  }
+
+  .bedi-config-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .bedi-config-group label {
+    min-width: auto;
+  }
+
+  .bedi-config-group select {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* 深色主题适配 */
+[data-theme="dark"] .bedi-header {
+  border-bottom-color: var(--color-border-2);
+}
+
+[data-theme="dark"] .bedi-usage-card {
+  background-color: var(--color-bg-3);
+  border-color: var(--color-border-2);
+}
+
+[data-theme="dark"] .bedi-demo-container {
+  background-color: var(--color-bg-3);
+  border-color: var(--color-border-2);
+}
+
+[data-theme="dark"] .bedi-table {
+  background-color: var(--color-bg-3);
+  border-color: var(--color-border-2);
+}
+
+[data-theme="dark"] .bedi-table th {
+  background-color: var(--color-bg-4);
+  border-bottom-color: var(--color-border-2);
+}
+
+[data-theme="dark"] .bedi-table td {
+  border-bottom-color: var(--color-border-2);
+}
+
+[data-theme="dark"] .bedi-code-block {
+  background-color: #1e1e1e;
+}
+
+[data-theme="dark"] .bedi-preview-panel,
+[data-theme="dark"] .bedi-config-panel,
+[data-theme="dark"] .bedi-style-description,
+[data-theme="dark"] .bedi-usage-description {
+  background-color: var(--color-bg-3);
+  border-color: var(--color-border-2);
+}
+
+[data-theme="dark"] .bedi-preview-header,
+[data-theme="dark"] .bedi-config-header {
+  background-color: var(--color-bg-4);
+  border-bottom-color: var(--color-border-2);
+}
+
+[data-theme="dark"] .bedi-config-group {
+  background-color: var(--color-bg-4);
+}
+
+/* 动画效果 */
+.bedi-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

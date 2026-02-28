@@ -1,0 +1,65 @@
+.bedi-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bedi-radio-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bedi-radio-circle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-border-2);
+  border-radius: 999px;
+  background: var(--color-bg-1);
+  transition: border-color 0.15s ease;
+}
+
+.bedi-radio:hover .bedi-radio-circle {
+  border-color: var(--color-primary);
+}
+
+.bedi-radio-input:checked + .bedi-radio-circle {
+  border-color: var(--color-primary);
+}
+
+.bedi-radio-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+
+.bedi-radio-input:checked + .bedi-radio-circle .bedi-radio-dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.bedi-radio-input:disabled + .bedi-radio-circle {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bedi-radio-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-1);
+}
+
+.bedi-radio-input:disabled ~ .bedi-radio-label {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

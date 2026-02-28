@@ -1,0 +1,60 @@
+.bedi-tooltip-trigger {
+  display: inline-block;
+}
+
+.bedi-tooltip {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.bedi-tooltip-content {
+  position: relative;
+}
+
+.bedi-tooltip-inner {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 250px;
+  word-wrap: break-word;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bedi-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+}
+
+.bedi-tooltip-top .bedi-tooltip-arrow {
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: rgba(0, 0, 0, 0.85);
+}
+
+.bedi-tooltip-bottom .bedi-tooltip-arrow {
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-color: rgba(0, 0, 0, 0.85);
+}
+
+.bedi-tooltip-left .bedi-tooltip-arrow {
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left-color: rgba(0, 0, 0, 0.85);
+}
+
+.bedi-tooltip-right .bedi-tooltip-arrow {
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right-color: rgba(0, 0, 0, 0.85);
+}

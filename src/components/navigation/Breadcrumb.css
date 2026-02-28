@@ -1,0 +1,31 @@
+.bedi-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--color-text-3);
+}
+
+.bedi-breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.bedi-breadcrumb-link {
+  color: var(--color-text-1);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bedi-breadcrumb-link:hover {
+  color: var(--color-primary);
+}
+
+.bedi-breadcrumb-text {
+  color: var(--color-text-1);
+}
+
+.bedi-breadcrumb-separator {
+  margin: 0 8px;
+  color: var(--color-text-3);
+}

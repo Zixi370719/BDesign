@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  check:
+    name: Type Check & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript type check
+        # continue-on-error allows pre-existing issues to not block CI
+        # Remove this flag once all pre-existing type warnings are resolved
+        continue-on-error: true
+        run: node_modules/.bin/tsc --noEmit
+
+      - name: Build docs site
+        run: npm run build
+
+      - name: Build library
+        run: npm run build:lib

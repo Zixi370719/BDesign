@@ -1,0 +1,40 @@
+.bedi-space {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.bedi-space-horizontal {
+  flex-direction: row;
+}
+
+.bedi-space-vertical {
+  flex-direction: column;
+}
+
+.bedi-space-align-start {
+  align-items: flex-start;
+}
+
+.bedi-space-align-end {
+  align-items: flex-end;
+}
+
+.bedi-space-align-center {
+  align-items: center;
+}
+
+.bedi-space-align-baseline {
+  align-items: baseline;
+}
+
+.bedi-space-align-stretch {
+  align-items: stretch;
+}
+
+.bedi-space-wrap {
+  flex-wrap: wrap;
+}
+
+.bedi-space-item {
+  flex: none;
+}

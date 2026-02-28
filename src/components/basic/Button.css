@@ -1,0 +1,554 @@
+/* BEDI Button Component - 基于 TDesign 设计系统 */
+
+/* Button-specific semantic tokens */
+.bedi-button {
+  --bedi-btn-color-success: #008858;
+  --bedi-btn-color-success-hover: #2BA471;
+  --bedi-btn-color-success-active: #006C45;
+  --bedi-btn-color-warning: #BE5A00;
+  --bedi-btn-color-warning-hover: #E37318;
+  --bedi-btn-color-warning-active: #954500;
+  --bedi-btn-color-info: #0052D9;
+  --bedi-btn-color-info-hover: var(--color-primary-hover);
+  --bedi-btn-color-info-active: #003CAB;
+}
+
+/* Base Button Styles */
+.bedi-button,
+a .bedi-button,
+.bedi-link .bedi-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 16px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  touch-action: manipulation;
+  position: relative;
+  overflow: visible;
+  outline: none;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.bedi-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-focus);
+}
+
+.bedi-button:disabled,
+.bedi-button-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Button Shapes */
+.bedi-button-square {
+  border-radius: var(--radius-md);
+}
+
+.bedi-button-round {
+  border-radius: var(--radius-xl);
+}
+
+.bedi-button-circle {
+  border-radius: 50%;
+  padding: 0;
+  width: 32px;
+}
+
+.bedi-button-circle.bedi-button-small {
+  width: 24px;
+  height: 24px;
+}
+
+.bedi-button-circle.bedi-button-large {
+  width: 40px;
+  height: 40px;
+}
+
+.bedi-button-circle.bedi-button-extra-large {
+  width: 48px;
+  height: 48px;
+}
+
+/* Icon Only Button */
+.bedi-button-icon-only {
+  padding: 0;
+  min-width: auto;
+}
+
+.bedi-button-icon-only.bedi-button-small {
+  width: 24px;
+  height: 24px;
+}
+
+.bedi-button-icon-only.bedi-button-medium {
+  width: 32px;
+  height: 32px;
+}
+
+.bedi-button-icon-only.bedi-button-large {
+  width: 40px;
+  height: 40px;
+}
+
+.bedi-button-icon-only.bedi-button-extra-large {
+  width: 48px;
+  height: 48px;
+}
+
+/* Button Label (inner text span) */
+.bedi-button .bedi-button-label {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: inherit !important;
+  background: transparent !important;
+  user-select: none;
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* Button Icon */
+.bedi-button .bedi-button-icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+}
+
+.bedi-button .bedi-button-icon svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+/* Variants */
+
+/* Primary */
+.bedi-button-primary,
+a .bedi-button-primary,
+.bedi-link .bedi-button-primary {
+  color: #ffffff !important;
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.bedi-button-primary:hover:not(:disabled) {
+  background: var(--color-primary-hover) !important;
+  border-color: var(--color-primary-hover) !important;
+  color: #ffffff !important;
+}
+
+.bedi-button-primary:active:not(:disabled) {
+  background: var(--color-primary-active) !important;
+  border-color: var(--color-primary-active) !important;
+  color: #ffffff !important;
+}
+
+/* Secondary */
+.bedi-button-secondary,
+a .bedi-button-secondary,
+.bedi-link .bedi-button-secondary {
+  color: var(--color-text-1) !important;
+  background-color: var(--color-bg-1) !important;
+  border-color: var(--color-border-1) !important;
+}
+
+.bedi-button-secondary:hover:not(:disabled) {
+  background-color: var(--color-bg-2) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
+}
+
+.bedi-button-secondary:active:not(:disabled) {
+  background-color: var(--color-bg-3) !important;
+  border-color: var(--color-primary-active) !important;
+  color: var(--color-primary-active) !important;
+}
+
+/* Outline */
+.bedi-button-outline,
+a .bedi-button-outline,
+.bedi-link .bedi-button-outline {
+  color: var(--color-primary) !important;
+  background-color: transparent !important;
+  border: 1px dashed var(--color-primary) !important;
+  box-shadow: none;
+}
+
+.bedi-button-outline:hover:not(:disabled) {
+  background-color: var(--color-primary-light) !important;
+  border-color: var(--color-primary-hover) !important;
+  color: var(--color-primary-hover) !important;
+}
+
+.bedi-button-outline:active:not(:disabled) {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary-active) !important;
+  color: #ffffff !important;
+}
+
+/* Text */
+.bedi-button-text,
+a .bedi-button-text,
+.bedi-link .bedi-button-text {
+  color: var(--color-primary) !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.bedi-button-text:hover:not(:disabled) {
+  background-color: var(--color-bg-2) !important;
+  color: var(--color-primary-hover) !important;
+}
+
+.bedi-button-text:active:not(:disabled) {
+  background-color: var(--color-bg-3) !important;
+  color: var(--color-primary-active) !important;
+}
+
+/* Danger */
+.bedi-button-danger,
+a .bedi-button-danger,
+.bedi-link .bedi-button-danger {
+  color: #ffffff !important;
+  background-color: var(--color-error) !important;
+  border-color: var(--color-error) !important;
+}
+
+.bedi-button-danger:hover:not(:disabled) {
+  background: var(--color-error-hover) !important;
+  border-color: var(--color-error-hover) !important;
+  color: #ffffff !important;
+}
+
+.bedi-button-danger:active:not(:disabled) {
+  background: var(--color-error-active) !important;
+  border-color: var(--color-error-active) !important;
+  color: #ffffff !important;
+}
+
+/* Success */
+.bedi-button-success,
+a .bedi-button-success,
+.bedi-link .bedi-button-success {
+  color: #ffffff !important;
+  background-color: var(--bedi-btn-color-success) !important;
+  border-color: var(--bedi-btn-color-success) !important;
+}
+
+.bedi-button-success:hover:not(:disabled) {
+  background: var(--bedi-btn-color-success-hover) !important;
+  border-color: var(--bedi-btn-color-success-hover) !important;
+  color: #ffffff !important;
+}
+
+.bedi-button-success:active:not(:disabled) {
+  background: var(--bedi-btn-color-success-active) !important;
+  border-color: var(--bedi-btn-color-success-active) !important;
+  color: #ffffff !important;
+}
+
+/* Warning */
+.bedi-button-warning,
+a .bedi-button-warning,
+.bedi-link .bedi-button-warning {
+  color: #ffffff !important;
+  background-color: var(--bedi-btn-color-warning) !important;
+  border-color: var(--bedi-btn-color-warning) !important;
+}
+
+.bedi-button-warning:hover:not(:disabled) {
+  background: var(--bedi-btn-color-warning-hover) !important;
+  border-color: var(--bedi-btn-color-warning-hover) !important;
+  color: #ffffff !important;
+}
+
+.bedi-button-warning:active:not(:disabled) {
+  background: var(--bedi-btn-color-warning-active) !important;
+  border-color: var(--bedi-btn-color-warning-active) !important;
+  color: #ffffff !important;
+}
+
+/* Info */
+.bedi-button-info,
+a .bedi-button-info,
+.bedi-link .bedi-button-info {
+  color: #ffffff !important;
+  background-color: var(--bedi-btn-color-info) !important;
+  border-color: var(--bedi-btn-color-info) !important;
+}
+
+.bedi-button-info:hover:not(:disabled) {
+  background: var(--bedi-btn-color-info-hover) !important;
+  border-color: var(--bedi-btn-color-info-hover) !important;
+  color: #ffffff !important;
+}
+
+.bedi-button-info:active:not(:disabled) {
+  background: var(--bedi-btn-color-info-active) !important;
+  border-color: var(--bedi-btn-color-info-active) !important;
+  color: #ffffff !important;
+}
+
+/* Ghost */
+.bedi-button-ghost,
+a .bedi-button-ghost,
+.bedi-link .bedi-button-ghost {
+  color: var(--color-text-1) !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.bedi-button-ghost:hover:not(:disabled) {
+  background-color: var(--color-bg-2) !important;
+  color: var(--color-text-1) !important;
+}
+
+.bedi-button-ghost:active:not(:disabled) {
+  background-color: var(--color-bg-3) !important;
+  color: var(--color-text-1) !important;
+}
+
+/* Sizes */
+
+/* Small */
+.bedi-button-small {
+  height: 24px;
+  padding: 0 12px;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+  gap: 4px;
+}
+
+.bedi-button-small.bedi-button-round {
+  border-radius: var(--radius-lg);
+}
+
+.bedi-button-small.bedi-button-circle {
+  width: 24px;
+  padding: 0;
+}
+
+/* Medium */
+.bedi-button-medium {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 14px;
+  gap: 6px;
+}
+
+.bedi-button-medium.bedi-button-circle {
+  width: 32px;
+  padding: 0;
+}
+
+/* Large */
+.bedi-button-large {
+  height: 40px;
+  padding: 0 24px;
+  font-size: 16px;
+  gap: 8px;
+  border-radius: var(--radius-lg);
+}
+
+.bedi-button-large.bedi-button-round {
+  border-radius: var(--radius-xl);
+}
+
+.bedi-button-large.bedi-button-circle {
+  width: 40px;
+  padding: 0;
+}
+
+/* Extra Large */
+.bedi-button-extra-large {
+  height: 48px;
+  padding: 0 32px;
+  font-size: 18px;
+  gap: 10px;
+  border-radius: var(--radius-lg);
+}
+
+.bedi-button-extra-large.bedi-button-round {
+  border-radius: var(--radius-xl);
+}
+
+.bedi-button-extra-large.bedi-button-circle {
+  width: 48px;
+  padding: 0;
+}
+
+/* Block */
+.bedi-button-block {
+  width: 100%;
+  display: flex;
+}
+
+/* Active scale effect */
+.bedi-button:active:not(:disabled) {
+  transform: translateY(1px) scale(0.98);
+  transition: transform 0.1s ease-out;
+}
+
+.bedi-button .bedi-button-label,
+.bedi-button .bedi-button-icon {
+  transition: none;
+}
+
+/* Dark Theme Support */
+[data-theme="dark"] .bedi-button-secondary {
+  color: var(--color-text-1) !important;
+  background-color: var(--color-bg-2) !important;
+  border-color: var(--color-border-2) !important;
+}
+
+[data-theme="dark"] .bedi-button-ghost {
+  color: var(--color-text-1) !important;
+}
+
+[data-theme="dark"] .bedi-button-text {
+  color: var(--color-primary) !important;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .bedi-button {
+    border-width: 2px;
+  }
+
+  .bedi-button:focus-visible {
+    outline-width: 3px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .bedi-button {
+    transition: none;
+  }
+
+  .bedi-button-loading-svg {
+    animation: none;
+  }
+
+  .bedi-button-loading-circle {
+    animation: none;
+  }
+}
+
+/* Link component style overrides */
+.bedi-link .bedi-button-primary,
+.bedi-link:hover .bedi-button-primary {
+  color: #ffffff !important;
+}
+
+.bedi-link .bedi-button-success,
+.bedi-link:hover .bedi-button-success {
+  color: #ffffff !important;
+}
+
+.bedi-link .bedi-button-warning,
+.bedi-link:hover .bedi-button-warning {
+  color: #ffffff !important;
+}
+
+.bedi-link .bedi-button-info,
+.bedi-link:hover .bedi-button-info {
+  color: #ffffff !important;
+}
+
+.bedi-link .bedi-button-outline,
+.bedi-link:hover .bedi-button-outline {
+  color: var(--color-primary) !important;
+}
+
+.bedi-link .bedi-button-secondary {
+  color: var(--color-text-1) !important;
+}
+
+.bedi-link:hover .bedi-button-secondary {
+  color: var(--color-primary) !important;
+}
+
+.bedi-link .bedi-button-text {
+  color: var(--color-primary) !important;
+}
+
+.bedi-link:hover .bedi-button-text {
+  color: var(--color-primary) !important;
+}
+
+.bedi-link .bedi-button-danger,
+.bedi-link:hover .bedi-button-danger {
+  color: #ffffff !important;
+}
+
+.bedi-link .bedi-button-ghost,
+.bedi-link:hover .bedi-button-ghost {
+  color: var(--color-text-1) !important;
+}
+
+/* Loading State */
+.bedi-button-loading {
+  pointer-events: none;
+}
+
+.bedi-button-loading-icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.bedi-button-loading-svg {
+  width: 1em;
+  height: 1em;
+  animation: bedi-button-loading-spin 1s linear infinite;
+}
+
+.bedi-button-loading-circle {
+  animation: bedi-button-loading-dash 1.5s ease-in-out infinite;
+}
+
+@keyframes bedi-button-loading-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bedi-button-loading-dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

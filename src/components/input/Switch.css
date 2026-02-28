@@ -1,0 +1,111 @@
+.bedi-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bedi-switch-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bedi-switch-slider {
+  position: relative;
+  display: inline-block;
+  background: var(--color-fill-2);
+  border: 1px solid var(--color-border-1);
+  border-radius: 999px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.bedi-switch-slider::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: var(--color-bg-1);
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  box-shadow: var(--shadow-1);
+}
+
+/* Small */
+.bedi-switch-small .bedi-switch-slider {
+  width: 32px;
+  height: 18px;
+}
+
+.bedi-switch-small .bedi-switch-slider::before {
+  width: 14px;
+  height: 14px;
+}
+
+.bedi-switch-small .bedi-switch-input:checked + .bedi-switch-slider::before {
+  transform: translateX(14px);
+}
+
+/* Medium */
+.bedi-switch-medium .bedi-switch-slider {
+  width: 40px;
+  height: 22px;
+}
+
+.bedi-switch-medium .bedi-switch-slider::before {
+  width: 18px;
+  height: 18px;
+}
+
+.bedi-switch-medium .bedi-switch-input:checked + .bedi-switch-slider::before {
+  transform: translateX(18px);
+}
+
+/* Large */
+.bedi-switch-large .bedi-switch-slider {
+  width: 48px;
+  height: 26px;
+}
+
+.bedi-switch-large .bedi-switch-slider::before {
+  width: 22px;
+  height: 22px;
+}
+
+.bedi-switch-large .bedi-switch-input:checked + .bedi-switch-slider::before {
+  transform: translateX(22px);
+}
+
+/* Checked */
+.bedi-switch-input:checked + .bedi-switch-slider {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Hover */
+.bedi-switch:hover .bedi-switch-slider {
+  border-color: var(--color-border-2);
+}
+
+.bedi-switch:hover .bedi-switch-input:checked + .bedi-switch-slider {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+/* Disabled */
+.bedi-switch-input:disabled + .bedi-switch-slider {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bedi-switch-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-2);
+}
+
+.bedi-switch-input:disabled ~ .bedi-switch-label {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

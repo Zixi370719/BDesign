@@ -1,0 +1,82 @@
+.bedi-component-demo-section {
+  background: var(--color-bg-1);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-8);
+  border: 1px solid var(--color-border-1);
+}
+
+.bedi-component-demo-header {
+  padding: var(--spacing-4) var(--spacing-6);
+  border-bottom: 1px solid var(--color-border-1);
+}
+
+.bedi-component-demo-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-1);
+  margin: 0 0 var(--spacing-2) 0;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.bedi-component-demo-description {
+  font-size: 14px;
+  color: var(--color-text-2);
+  line-height: 1.5715;
+}
+
+.bedi-component-demo-preview {
+  padding: var(--spacing-10);
+  background: var(--color-bg-1);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  border-bottom: 1px solid var(--color-border-1);
+}
+
+.bedi-component-demo-config {
+  padding: var(--spacing-4) var(--spacing-6);
+  background: var(--color-bg-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-6);
+  border-bottom: 1px solid var(--color-border-1);
+}
+
+.bedi-config-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.bedi-config-label {
+  font-size: 13px;
+  color: var(--color-text-3);
+  font-weight: 400;
+}
+
+.bedi-component-demo-footer {
+  padding: var(--spacing-2) var(--spacing-6);
+  display: flex;
+  justify-content: flex-end;
+  background: var(--color-bg-3);
+}
+
+.bedi-component-demo-toggle {
+  background: transparent;
+  border: none;
+  color: var(--color-text-3);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+
+.bedi-component-demo-toggle:hover {
+  background: var(--color-fill-2);
+  color: var(--color-text-1);
+}
