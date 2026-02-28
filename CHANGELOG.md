@@ -41,3 +41,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Figma Token sync via `style-dictionary`
 - Search with `Fuse.js` (Cmd/Ctrl + K)
 - Right-side Table of Contents for long pages
+
